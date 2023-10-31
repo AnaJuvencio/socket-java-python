@@ -1,6 +1,6 @@
 # socket-java-python
 
-##Cliente Java:
+## Cliente Java:
 
 1. Compile e execute o código do cliente Java em uma máquina cliente. Certifique-se de que a máquina cliente possa se conectar à máquina onde o servidor Python está em execução.
 2. O cliente Java solicitará que você escolha entre "SEND" (enviar arquivo) ou "RECEIVE" (receber arquivo).
@@ -9,7 +9,7 @@
 5. O cliente se conectará ao servidor Python na máquina e porta especificadas, e a comunicação ocorrerá.
 6. Após a conclusão da operação, o cliente Java exibirá uma mensagem apropriada (por exemplo, "Arquivo Enviado" ou "    Arquivo Salvo").
 
-##Servidor Python:
+## Servidor Python:
 
 1. Compile e execute o código do servidor Python na máquina servidor. Certifique-se de que a máquina servidor tenha uma porta acessível para conexões de clientes (porta 12345 no exemplo fornecido).
 2. O servidor Python aguardará conexões de clientes na porta especificada.
