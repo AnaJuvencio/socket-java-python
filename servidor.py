@@ -17,19 +17,19 @@ def send_file(file_name, client_socket):
 
 def handle_client(client_socket):
     option = client_socket.recv(1024).decode()
-    file_name = client_socket.recv(1024).decode().strip()  # Use strip() para remover \r\n
+    file_name = client_socket.recv(1024).decode().strip()  
 
-    if option.strip() == "SEND":  # Use strip() para remover \r\n
-        print(f"Receiving file: {file_name}")
+    if option.strip() == "SEND":  
+        print(f"Recebendo arquivo: {file_name}")
         receive_file(file_name, client_socket)
-        print(f"Received file: {file_name}")
-    elif option.strip() == "RECEIVE":  # Use strip() para remover \r\n
+        print(f"Arquivo recebido: {file_name}")
+    elif option.strip() == "RECEIVE":  # remover \r\n
         full_file_path = 'C:/Users/Beatriz/Documents/redes2/RecebidoServidor/' + file_name
-        print(f"Sending file: {full_file_path}")
+        print(f"Enviando Arquivo: {full_file_path}")
         send_file(full_file_path, client_socket)
-        print(f"Sent file: {full_file_path}")
+        print(f"Arquivo enviado: {full_file_path}")
     else:
-        print("Invalid option: " + option)
+        print("Opção invalida: " + option)
 
 
 
@@ -43,7 +43,7 @@ def main():
     server.bind((host, port))
     server.listen(5)
 
-    print("Server is ready to receive connections...")
+    print("Servidor recebendo conexão...")
 
     while True:
         client_socket, addr = server.accept()

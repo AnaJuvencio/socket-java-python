@@ -14,9 +14,9 @@ public class ClienteJava {
 
             Scanner scanner = new Scanner(System.in);
 
-            System.out.print("Enter (SEND or RECEIVE): ");
+            System.out.print("Coloque (SEND or RECEIVE): ");
             String option = scanner.nextLine();
-            System.out.print("Enter file name: ");
+            System.out.print("Qual o nome do arquivo: ");
             String fileName = scanner.nextLine();
 
             outToServer.println(option);
@@ -30,7 +30,7 @@ public class ClienteJava {
                     while ((bytesRead = fileInputStream.read(buffer)) != -1) {
                         fileOutputStream.write(buffer, 0, bytesRead);
                     }
-                    System.out.println("File sent.");
+                    System.out.println("Arquivo enviado.");
                 }
             } else if ("RECEIVE".equals(option)) {
                 try (FileOutputStream fileOutputStream = new FileOutputStream(fileName);
@@ -40,10 +40,10 @@ public class ClienteJava {
                     while ((bytesRead = fileInputStream.read(buffer)) != -1) {
                         fileOutputStream.write(buffer, 0, bytesRead);
                     }
-                    System.out.println("File received and saved.");
+                    System.out.println("Arquivo salvo.");
                 }
             } else {
-                System.out.println("Invalid option: " + option);
+                System.out.println("Opção inválida: " + option);
             }
         } catch (IOException e) {
             e.printStackTrace();
