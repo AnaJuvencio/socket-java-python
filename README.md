@@ -11,7 +11,7 @@
 
 ## Servidor Python:
 
-1. Compile e execute o código do servidor Python na máquina servidor. Certifique-se de que a máquina servidor tenha uma porta acessível para conexões de clientes (porta 12345 no exemplo fornecido).
+1. Compile e execute o código do servidor Python na máquina servidor. Certifique-se de que a máquina servidor tenha uma porta acessível para conexões de clientes (porta 12346 no exemplo fornecido).
 2. O servidor Python aguardará conexões de clientes na porta especificada.
 3. Quando um cliente se conectar, o servidor Python criará uma nova thread para lidar com essa conexão.
 4. O servidor receberá a opção ("SEND" ou "RECEIVE") e o nome do arquivo do cliente.
