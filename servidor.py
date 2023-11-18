@@ -36,7 +36,7 @@ def handle_client(client_socket):
     client_socket.close()
 
 def main():
-    host = "192.168.0.23" #UTILIZE O SEU
+    host = "" #UTILIZE O SEU
     port = 12346
 
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
