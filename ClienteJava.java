@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ClienteJava {
 
     public static void main(String[] args) {
-        String serverName = "192.168.0.23";
+        String serverName = ""; //seu IP
         int serverPort = 12346;
 
         try (Socket clientSocket = new Socket(serverName, serverPort);
